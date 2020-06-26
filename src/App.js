@@ -36,7 +36,7 @@ class App extends Component {
                 {item.banned_username}
             </td>
             <td>
-                {item.ban_date}
+                {item.ban_reason}
             </td>
             <td>
               <button onClick={() => this.editItem(item)} className="btn btn-secondary mr-2"> Edit </button>
