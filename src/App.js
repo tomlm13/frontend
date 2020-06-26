@@ -22,7 +22,7 @@ class App extends Component {
     }
     refreshList = () => {
       axios
-          .get("http://localhost:8080/api/testviews/")
+          .get("https://bannylist.herokuapp.com/api/testviews/")
           .then(res => this.setState({ todoList: res.data }))
           .catch(err => console.log(err));
     };
@@ -50,7 +50,7 @@ class App extends Component {
     handleDelete = item => {
         alert("delete" + JSON.stringify(item));
         axios
-          .delete(`http://localhost:8080/api/testviews/${item.id}`)
+          .delete(`https://bannylist.herokuapp.com/api/testviews/${item.id}`)
           .then(res => this.refreshList());
     };
     createItem = () => {
@@ -67,12 +67,12 @@ class App extends Component {
         this.toggle();
         if (item.id) {
           axios
-          .put(`http://localhost:8080/api/testviews/${item.id}/`, item)
+          .put(`https://bannylist.herokuapp.com/api/testviews/${item.id}/`, item)
           .then(res => this.refreshList());
           return;
         }
         axios
-        .post("http://localhost:8080/api/testviews/", item)
+        .post("https://bannylist.herokuapp.com/api/testviews/", item)
         .then(res => this.refreshList());
 };
     render() {
