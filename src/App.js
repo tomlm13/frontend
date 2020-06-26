@@ -77,9 +77,9 @@ class App extends Component {
 };
     render() {
       return (
-        <main className="content">
-        <h1 className="text-black text-uppercase text-center my-4">Banned Users</h1>
-        <div className='row'>
+        <main>
+        <h2 >Banned Users</h2>
+        <div>
           <table className='intro'>
             {this.renderItems()}
           </table>
