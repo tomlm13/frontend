@@ -85,9 +85,9 @@ class App extends Component {
             {this.renderItems()}
           </table>
           </div>
-          <div className="row ">
-            <div className="col-md-6 col-sm-5 mx-auto p-0">
-              <div className="card p-3">
+          <div>
+            <div className="col-md-3 col-sm-3 mx-auto">
+              <div className="card p-2">
 
                   <button onClick={this.createItem} className="btn btn-primary">
                     Ban User
